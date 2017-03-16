@@ -10,14 +10,14 @@ namespace Strategy
     {
         private static Dictionary<Roles, IRoles> _strategies = new Dictionary<Roles, IRoles>();
 
-        public Context()
+        static Context()
         {
             _strategies.Add(Roles.Usuario, new Usuario());
             _strategies.Add(Roles.Administrador, new Administrador());
             _strategies.Add(Roles.Invitado, new Invitado());
         }
 
-        public void Login(Roles rol)
+        public static void Login(Roles rol)
         {
             _strategies[rol].Login();
         }

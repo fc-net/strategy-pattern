@@ -11,8 +11,7 @@ namespace Strategy
         static void Main(string[] args)
         {
             Roles rol = Roles.Usuario;
-            Context context = new Context();
-            context.Login(rol);
+            Context.Login(rol);
         }
     }
 }
